@@ -34,5 +34,16 @@ namespace CLSS
       return (minCompareRes > 0 || (minInclusive == (minCompareRes == 0)))
         && (maxCompareRes < 0 || (maxInclusive == (maxCompareRes == 0)));
     }
+
+#if NETSTANDARD2_0_OR_GREATER
+    /// <inheritdoc cref="InRange{T}(T, T, T, bool, bool)"/>
+    /// <param name="range">A range struct containing the lower and upper bounds
+    /// to check <paramref name="value"/> against. By default, it is
+    /// min-inclusive and max-exclusive.</param>
+    public static bool InRange<T>(this T value, ValueRange<T> range,
+      bool minInclusive = true, bool maxInclusive = false)
+      where T : IComparable<T>
+    { return value.InRange(range.Min, range.Max, minInclusive, maxInclusive); }
+#endif
   }
 }
