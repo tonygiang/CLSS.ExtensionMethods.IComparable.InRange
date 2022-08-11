@@ -35,7 +35,7 @@ using CLSS;
 value.InRange(min, max, false, true) // false if value == min, true if value == max
 ```
 
-From version 1.1.0, `InRanbge` can also take in CLSS type [`ValueRange`](https://www.nuget.org/packages/CLSS.Types.ValueRange) on .NET Standard 2.0 or higher.
+From version 1.1.0, `InRange` can also take in CLSS type [`ValueRange`](https://www.nuget.org/packages/CLSS.Types.ValueRange) on .NET Standard 2.0 or higher.
 
 ```
 using CLSS;
