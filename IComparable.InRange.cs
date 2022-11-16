@@ -35,7 +35,7 @@ namespace CLSS
         && (maxCompareRes < 0 || (maxInclusive == (maxCompareRes == 0)));
     }
 
-#if NETSTANDARD2_0_OR_GREATER
+#if NETSTANDARD2_0_OR_GREATER || NET_STANDARD_2_0
     /// <inheritdoc cref="InRange{T}(T, T, T, bool, bool)"/>
     /// <param name="range">A range struct containing the lower and upper bounds
     /// to check <paramref name="value"/> against. By default, it is
